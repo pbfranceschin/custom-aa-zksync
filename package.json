@@ -1,0 +1,41 @@
+{
+  "name": "zksync-hardhat-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Antonio <aug@matterlabs.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
+    "@matterlabs/hardhat-zksync-solc": "^0.4.0",
+    "@matterlabs/hardhat-zksync-verify": "^0.1.8",
+    "@matterlabs/zksync-contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-ethers": "^3.0.3",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/contracts": "^4.9.2",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "add": "^2.0.6",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.4",
+    "hardhat-ethernal": "^3.2.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "zksync-web3": "^0.14.3"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test hardhat test --network zkSyncTestnet",
+    "deploy-factory": "yarn hardhat deploy-zksync --script deploy-factory.ts",
+    "deploy-account": "yarn hardhat deploy-zksync --script deploy-account.ts",
+    "deploy-token": "yarn hardhat deploy-zksync --script deploy-token.ts",
+    "deploy-nft": "yarn hardhat deploy-zksync --script deploy-nft.ts",
+    "token-transfer": "yarn hardhat deploy-zksync --script token-transfer.ts", 
+    "nft-transfer" : "yarn hardhat deploy-zksync --script nft-transfer.ts",
+    "fund-account": "yarn hardhat deploy-zksync --script fund-account.ts",
+    "simulate-borrow": "yarn hardhat deploy-zksync --script simulate-borrow.ts",
+    "blocked-calls": "yarn hardhat deploy-zksync --script blocked-calls.ts"
+  }
+}
